@@ -1,0 +1,19 @@
+{
+  "name": "treasuretrove",
+  "version": "0.0.0",
+  "description": "Media organizer",
+  "main": "trove.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/digidem/treasuretrove.git"
+  },
+  "keywords": [
+    "photos"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "d3": "3",
+    "smash": "0.0",
+    "uglify-js": "~2.2.5"
+  }
+}

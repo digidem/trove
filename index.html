@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treasure Trove</title>
+<link href='css/reset.css' rel='stylesheet' />
+<link href='css/grid.css' rel='stylesheet' />
+
+<style>
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+</style>
+<body>
+<div id="trove"></div>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.mobile.js"></script>
+<script src="lib/d3.dimensions.js"></script>
+<script src="lib/async.js"></script>
+<script src="lib/jxon.js"></script>
+<script src="lib/canvas-to-blob.js"></script>
+
+<script src="src/trove.js"></script>
+<script src="src/util.js"></script>
+<script src="src/store/filestorage.js"></script>
+<script src="src/store/store.js"></script>
+<script src="src/store/thumbcache.js"></script>
+<script src="src/store/webdav.js"></script>
+<script src="src/models/base.js"></script>
+<script src="src/models/thumb.js"></script>
+<script src="src/models/mediaitem.js"></script>
+<script src="src/models/mediacollection.js"></script>
+<script src="src/ui.js"></script>
+<script src="src/ui/grid.js"></script>
+<script>
+    // Initialize a new trove
+    var trove = Trove({
+        url: "http://10.0.1.18:3001/facebook",
+        auth: { user: "test",
+                password: "test"
+            }
+    })
+    d3.select("#trove").call(trove.ui());
+</script>
+</body>
